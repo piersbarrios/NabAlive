@@ -1,7 +1,7 @@
 package com.nabalive.data.core.model;
 
-import com.google.code.morphia.annotations.Embedded;
-import com.google.code.morphia.annotations.Indexed;
+import org.mongodb.morphia.annotations.Embedded;
+import org.mongodb.morphia.annotations.Indexed;
 
 /**
  * Created by IntelliJ IDEA.

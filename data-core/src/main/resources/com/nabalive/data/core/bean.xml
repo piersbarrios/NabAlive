@@ -17,7 +17,7 @@
     <context:property-placeholder order="1" location="classpath:/properties/mongo.properties"
                                   system-properties-mode="OVERRIDE"/>
 
-    <bean class="com.mongodb.Mongo" id="mongo">
+    <bean class="com.mongodb.MongoClient" id="mongo">
         <constructor-arg type="java.lang.String" value="${mongo.host}"/>
     </bean>
 

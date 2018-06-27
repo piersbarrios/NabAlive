@@ -1,8 +1,8 @@
 package com.nabalive.data.core.model;
 
-import com.google.code.morphia.annotations.CappedAt;
-import com.google.code.morphia.annotations.Entity;
-import com.google.code.morphia.annotations.Id;
+import org.mongodb.morphia.annotations.CappedAt;
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
 import org.bson.types.ObjectId;
 
 import javax.validation.constraints.NotNull;

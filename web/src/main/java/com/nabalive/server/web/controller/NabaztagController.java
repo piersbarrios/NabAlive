@@ -1,13 +1,13 @@
 package com.nabalive.server.web.controller;
 
-import com.google.code.morphia.query.Query;
-import com.google.code.morphia.query.UpdateOperations;
+import org.mongodb.morphia.query.Query;
+import org.mongodb.morphia.query.UpdateOperations;
 import com.google.common.base.CharMatcher;
 import com.google.common.base.Function;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.mongodb.MongoException;
+import com.mongodb.MongoClientException;
 import com.nabalive.common.server.MessageService;
 import com.nabalive.data.core.dao.NabaztagDAO;
 import com.nabalive.data.core.dao.UserDAO;
@@ -110,7 +110,7 @@ public class NabaztagController {
 
                         try {
                             nabaztagDAO.save(nabaztag);
-                        } catch (MongoException.DuplicateKey e) {
+                        } catch (MongoClientException e) {
                             ImmutableMap<String, String> error = (new ImmutableMap.Builder<String, String>()).put("error", "Adresse mac déjà enregistrée").build();
                             response.writeJSON(error);
                             return;
@@ -139,7 +139,7 @@ public class NabaztagController {
 
                         try {
                             nabaztagDAO.save(nabaztag);
-                        } catch (MongoException.DuplicateKey e) {
+                        } catch (MongoClientException e) {
                             ImmutableMap<String, String> error = (new ImmutableMap.Builder<String, String>()).put("error", "Adresse mac déjà enregistrée").build();
                             response.writeJSON(error);
                             return;

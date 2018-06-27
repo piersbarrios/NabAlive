@@ -1,6 +1,6 @@
 package com.nabalive.data.core.model;
 
-import com.google.code.morphia.annotations.*;
+import org.mongodb.morphia.annotations.*;
 import org.bson.types.ObjectId;
 
 import javax.validation.constraints.NotNull;

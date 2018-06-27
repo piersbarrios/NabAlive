@@ -1,6 +1,6 @@
 package com.nabalive.server.web;
 
-import com.google.code.morphia.query.Query;
+import org.mongodb.morphia.query.Query;
 import com.nabalive.application.core.Application;
 import com.nabalive.application.core.ApplicationManager;
 import com.nabalive.common.server.MessageService;

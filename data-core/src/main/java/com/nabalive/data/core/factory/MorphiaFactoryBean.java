@@ -1,7 +1,7 @@
 package com.nabalive.data.core.factory;
 
-import com.google.code.morphia.Morphia;
-import com.google.code.morphia.validation.MorphiaValidation;
+import org.mongodb.morphia.Morphia;
+import org.mongodb.morphia.ValidationExtension;
 
 /**
  * Created by IntelliJ IDEA.
@@ -17,8 +17,7 @@ public class MorphiaFactoryBean {
 
     public Morphia createInstance(){
         Morphia morphia = new Morphia();
-        MorphiaValidation morphiaValidation = new MorphiaValidation();
-        morphiaValidation.applyTo(morphia);
+        new ValidationExtension(morphia);
         return morphia.mapPackage(packageName);
     }
 }

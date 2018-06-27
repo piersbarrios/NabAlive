@@ -1,12 +1,12 @@
 package com.nabalive.data.core.dao;
 
-import com.google.code.morphia.Morphia;
-import com.google.code.morphia.dao.BasicDAO;
+import org.mongodb.morphia.Morphia;
+import org.mongodb.morphia.dao.BasicDAO;
 import com.google.common.base.Function;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
-import com.mongodb.Mongo;
+import com.mongodb.MongoClient;
 import com.nabalive.data.core.model.ApplicationStore;
 import com.nabalive.data.core.model.Nabaztag;
 import org.bson.types.ObjectId;
@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 @Component("applicationStoreDAO")
 public class ApplicationStoreDAO extends BasicDAO<ApplicationStore, ObjectId> {
     @Autowired
-    public ApplicationStoreDAO(Morphia morphia, Mongo mongo, @Value("${mongo.database}") String database) {
+    public ApplicationStoreDAO(Morphia morphia, MongoClient mongo, @Value("${mongo.database}") String database) {
         super(mongo, morphia, database);
         getDatastore().ensureIndexes();
     }

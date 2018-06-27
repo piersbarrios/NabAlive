@@ -1,6 +1,6 @@
 package com.nabalive.server.web.controller;
 
-import com.google.code.morphia.query.Query;
+import org.mongodb.morphia.query.Query;
 import com.nabalive.data.core.dao.UserDAO;
 import com.nabalive.data.core.model.User;
 import com.nabalive.framework.web.Request;

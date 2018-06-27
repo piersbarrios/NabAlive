@@ -1,6 +1,6 @@
 package com.nabalive.server.web.controller;
 
-import com.google.code.morphia.query.Query;
+import org.mongodb.morphia.query.Query;
 import com.google.common.io.ByteStreams;
 import com.mongodb.WriteConcern;
 import com.nabalive.common.server.MessageService;

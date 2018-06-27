@@ -1,6 +1,6 @@
 package com.nabalive.data.core.model;
 
-import com.google.code.morphia.annotations.*;
+import org.mongodb.morphia.annotations.*;
 import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import org.bson.types.ObjectId;
